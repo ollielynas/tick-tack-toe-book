@@ -1238,4 +1238,3 @@ class = "page"
 <table><tr><td class = "xo">X</td><td class = "xo">X</td><td class = "xo">O</td></tr><tr><td class = "xo">O</td><td class = "xo">O</td><td class = "xo">X</td></tr><tr><td class = "xo">X</td><td class = "xo">O</td><td class = "xo">O</td></tr></table> 
 <p class = "bottom-text">tie</p>
 </div>
-]
