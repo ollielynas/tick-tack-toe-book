@@ -284,13 +284,9 @@ class = \"page\"
                 eprintln!("Couldn't write to file: {}", e);
             }
         }
-        if let Err(e) = writeln!(file, "]") {
-            eprintln!("Couldn't write to file: {}", e);
-        }
+
 
         let mut game = [GridBox::Blank; 9];
         
 
     }
-
- 
