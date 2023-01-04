@@ -221,7 +221,7 @@ fn main() {
         position: relative;
         width: 100%;
         top: 100%;
-        left: -10%;
+        left: -14%;
         transform: translate(0, 400%);
         text-align: center;
         font: 60px \"Libre Caslon Text\"
@@ -237,13 +237,22 @@ fn main() {
 class = \"page\"
 >
 <br>
-<h1 class = \"title\">Tic Tac Toe</h1>
-<h2>a step by step guide</h2>
+<p><br><br>this book is dedicated to Luka because we both thought it was funny</p>
 </div>
 
+<div class = \"page\"><br></div>
 
-<div class = \"page\">2</div>
-<div class = \"page\">3</div>
+<div class = \"page\">
+<h2> How To Use: </h2>
+<p>
+On each paige of this book is a grid representing a tic tac toe board. When the game starts turn to either page<br>
+5 or 6 depending on who starts. you are playing X in this game. When you opponent makes their move turn to the<br>
+page indicated by the number on the square they played. on this page will be an identical grid except for<br>
+two changes. It will now show where you opponent just played and it will also show you the ideal move to play.<br>
+<p>
+</div>
+
+<div class = \"page\"><br></div>
         ") {
             eprintln!("Couldn't write to file: {}", e);
         }
@@ -258,7 +267,7 @@ class = \"page\"
                         let mut sim_game = pg.clone();
                         sim_game[i] = GridBox::O;
                         sim_game = make_move(sim_game);
-                        match options.get(&sim_game) {Some(x) => format!("<td class = \"pg\">Pg {}</td>",x+3), None => String::from("<td class = \"pg\"> </td>")}
+                        match options.get(&sim_game) {Some(x) => format!("<td class = \"pg\">Pg {}</td>",x+4), None => String::from("<td class = \"pg\"> </td>")}
                     }
 
                 });
@@ -277,7 +286,7 @@ class = \"page\"
 
                 GridBox::X => "x wins",
                 GridBox::O => "o wins... somehow?",
-                _ if !pg.contains(&GridBox::Blank) => "tie",
+                _ if !pg.contains(&GridBox::Blank) => "Tie",
                 GridBox::Blank => "",
             }, )
         ) {
